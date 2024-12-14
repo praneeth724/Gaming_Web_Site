@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-const Button = ({ id, title, rightIcon, leftIcon, containerClass }) => {
+const Button = ({ title, id, rightIcon, leftIcon, containerClass }) => {
   return (
     <button
       id={id}
