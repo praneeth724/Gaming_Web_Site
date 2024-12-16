@@ -4,7 +4,6 @@ import { ScrollTrigger } from "gsap/all";
 import { TiLocationArrow } from "react-icons/ti";
 import { useEffect, useRef, useState } from "react";
 import Button from "./Button";
-
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
@@ -46,7 +45,7 @@ const Hero = () => {
           ease: "power1.inOut",
           onStart: () => nextVdRef.current.play(),
         });
-        gsap.from("#currect-video", {
+        gsap.from("#current-video", {
           transformOrigin: "center center",
           scale: 0,
           duration: 1.5,
@@ -62,7 +61,7 @@ const Hero = () => {
 
   useGSAP(() => {
     gsap.set("#video-frame", {
-      clipPath: "polygon(14% 0, 72% 0, 88% 90%, 0 95%)",
+      clipPath: "polygon(14% 0, 72% 0, 90% 90%, 0 95%)",
       borderRadius: "0% 0 40% 10%",
     });
     gsap.from("#video-frame", {
@@ -78,7 +77,7 @@ const Hero = () => {
     });
   });
 
-  const getVideoSrc = (index) => `videos/video-${index}.mp4`;
+  const getVideoSrc = (index) => `videos/hero-${index}.mp4`;
 
   return (
     <div className="relative h-dvh w-screen overflow-x-hidden">
